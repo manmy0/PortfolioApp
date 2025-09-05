@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PortfolioApp.Models;
 
 public partial class CareerDevelopmentPlan
 {
+    [Key]
     public string UserId { get; set; } = null!;
 
     public short Year { get; set; }
@@ -21,5 +23,6 @@ public partial class CareerDevelopmentPlan
 
     public string? NetworkingPlan { get; set; }
 
-    public virtual AspNetUser User { get; set; } = null!;
+    public virtual ApplicationUser User { get; set; } = null!;
+
 }

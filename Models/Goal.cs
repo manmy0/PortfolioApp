@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PortfolioApp.Models;
 
 public partial class Goal
 {
+    [Key]
     public long GoalId { get; set; }
 
     public string UserId { get; set; } = null!;
@@ -29,5 +31,5 @@ public partial class Goal
 
     public virtual ICollection<GoalStep> GoalSteps { get; set; } = new List<GoalStep>();
 
-    public virtual AspNetUser User { get; set; } = null!;
+    public virtual ApplicationUser User { get; set; } = null!;
 }

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PortfolioApp.Models;
 
 public partial class IndustryContactInfo
 {
+    [Key]
     public long ContactInfoId { get; set; }
 
     public long ContactId { get; set; }

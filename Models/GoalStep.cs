@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PortfolioApp.Models;
 
 public partial class GoalStep
 {
+    [Key]
     public long StepId { get; set; }
 
     public long GoalId { get; set; }

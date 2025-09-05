@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PortfolioApp.Models;
 
@@ -7,6 +8,7 @@ public partial class CompetencyTracker
 {
     public string UserId { get; set; } = null!;
 
+    [Key]
     public long CompetencyId { get; set; }
 
     public DateOnly StartDate { get; set; }
@@ -25,5 +27,5 @@ public partial class CompetencyTracker
 
     public virtual Competency Competency { get; set; } = null!;
 
-    public virtual AspNetUser User { get; set; } = null!;
+    public virtual ApplicationUser User { get; set; } = null!;
 }

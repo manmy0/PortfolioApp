@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PortfolioApp.Models;
 
 public partial class Cdl
 {
+    [Key]
     public int CdlId { get; set; }
 
     public DateTime DateCreated { get; set; }
@@ -16,4 +18,5 @@ public partial class Cdl
     public string? Link { get; set; }
 
     public DateTime LastUpdated { get; set; }
+
 }

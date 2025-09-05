@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PortfolioApp.Models;
 
 public partial class Competency
 {
+    [Key]
     public long CompetencyId { get; set; }
 
     public long? ParentCompetencyId { get; set; }
